@@ -1,0 +1,31 @@
+package com.pluralsight.repository;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.pluralsight.models.Customer;
+
+/**
+ * This class is for repository purpose
+ * @author fre
+ *
+ */
+public class HibernateCustomerRepository implements CustomerRepository {
+	
+	/* (non-Javadoc)
+	 * @see com.pluralsight.repository.CustomerInterface#findAll()
+	 */
+	@Override
+	public List<Customer> findAll(){
+		
+		List<Customer> customers = new ArrayList<>();
+		
+		Customer customer = new Customer();
+		customer.setFirstName("Firas");
+		customer.setLastName("Rega");
+		
+		customers.add(customer);
+		
+		return customers;
+	}
+}
