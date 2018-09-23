@@ -1,8 +1,8 @@
-package com.pluralsight.service;
+package com.fre.service;
 
 import java.util.List;
 
-import com.pluralsight.models.Customer;
+import com.fre.models.Customer;
 
 /**
  * This interface was extracted from the {@link CustomerServiceImp}
