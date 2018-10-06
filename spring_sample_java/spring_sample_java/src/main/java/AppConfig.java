@@ -1,11 +1,5 @@
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
-
-import com.pluralsight.repository.CustomerRepository;
-import com.pluralsight.repository.HibernateCustomerRepository;
-import com.pluralsight.service.CustomerServiceImp;
 
 
 /**

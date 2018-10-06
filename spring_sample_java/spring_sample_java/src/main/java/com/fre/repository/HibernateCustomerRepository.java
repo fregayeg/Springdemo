@@ -1,11 +1,11 @@
-package com.pluralsight.repository;
+package com.fre.repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.pluralsight.models.Customer;
+import com.fre.models.Customer;
 
 /**
  * This class is for repository purpose

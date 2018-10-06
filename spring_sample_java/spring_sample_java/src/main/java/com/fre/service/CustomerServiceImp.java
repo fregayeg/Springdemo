@@ -1,4 +1,4 @@
-package com.pluralsight.service;
+package com.fre.service;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
-import com.pluralsight.models.Customer;
-import com.pluralsight.repository.CustomerRepository;
+import com.fre.models.Customer;
+import com.fre.repository.CustomerRepository;
 
 /**
  * In this class we are making a method that could talk to our repository so we
