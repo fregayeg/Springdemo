@@ -2,30 +2,36 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	
+
 	<!-- IMPORTANT:beans names are declared like variables in Java -->
-	
+
 	<!-- SETTER INJECTION: a Setter inside the parent bean class is required -->
-	
+
 	<!-- customerRepository bean is of type HibernateCustomerRepository -->
-	<bean name="customerRepository" 
-		class="com.fre.repository.HibernateCustomerRepository"/>
-	
-	<!-- customerRepository previous bean injection inside a new customerService bean which is of type CustomerServiceImp -->
-	<!-- <bean name="customerService" 
-			class="com.fre.service.CustomerServiceImp">
-			<property name="customerRepository" ref="customerRepository"/>	
-		</bean> -->
-	
-	<!-- CONSTRUCTOR INJECTION; a constructor inside the parent beans class is required -->
-	
-	<!-- We can use autowire BY constructor instead of writing the args in the constructor and the type of each arg -->
-	<!-- We can use autowire BY type if we want to check the type passed inside our setter injection as arg-->
-	<!-- We can use autowire BY name if we want to check the name inside our setter injection (the name next to the 'set' keyword) -->
-	<bean name="customerService" 
-		class="com.fre.service.CustomerServiceImp" autowire="constructor">
-		<!--<constructor-arg index="0" ref="customerRepository"/>-->
-		<!-- <constructor-arg index="1" ref="ANOTHER_BEAN"/>-->
-		<!-- <constructor-arg index="2" ref="ANOTHER_BEAN"/>-->
-	</bean> 
+	<bean name="customerRepository"
+		class="com.fre.repository.HibernateCustomerRepository" />
+
+	<!-- This is the customerRepository, which is the previous bean injected 
+		now inside a new customerService bean which is of type CustomerServiceImp -->
+	<!-- <bean name="customerService" class="com.fre.service.CustomerServiceImp"> 
+		<property name="customerRepository" ref="customerRepository"/> </bean> -->
+
+	<!-- CONSTRUCTOR INJECTION: a constructor inside the parent bean class is 
+		required -->
+
+	<!-- We can use autowire BY constructor instead of writing the args in the 
+		constructor and the type of each arg -->
+	<!-- We can use autowire BY type if we want to check the type passed inside 
+		our setter injection as arg -->
+	<!-- We can use autowire BY name if we want to check the name of our setter 
+		injection (the name just next to the 'set' keyword) -->
+	<!-- <bean name="customerService"
+		 class="com.fre.service.CustomerServiceImp" autowire="byType" scope="singleton">-->
+		 <bean name="customerService"
+		 class="com.fre.service.CustomerServiceImp" autowire="byType" scope="prototype">	 
+		<!-- The next tags are ONLY used when autowire = constructor -->
+		<!--<constructor-arg index="0" ref="customerRepository"/> -->
+		<!-- <constructor-arg index="1" ref="ANOTHER_BEAN"/> -->
+		<!-- <constructor-arg index="2" ref="ANOTHER_BEAN"/> -->
+	</bean>
 </beans>

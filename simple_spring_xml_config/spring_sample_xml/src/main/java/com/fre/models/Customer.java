@@ -1,20 +1,21 @@
 package com.fre.models;
 
 /**
- * This class is a simple object with few fields 
+ * This class is a simple object with few fields
+ * 
  * @author fre
  *
  */
 public class Customer {
-	
+
 	// properties
 	private String firstName;
 	private String lastName;
-	
+
 	public Customer() {
-		
+
 	}
-	
+
 	// getters and setters
 	public String getFirstName() {
 		return firstName;
