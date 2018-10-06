@@ -1,5 +1,5 @@
-import com.pluralsight.service.CustomerService;
-import com.pluralsight.service.CustomerServiceImp;
+import com.fre.service.CustomerService;
+import com.fre.service.CustomerServiceImp;
 
 public class Application {
 

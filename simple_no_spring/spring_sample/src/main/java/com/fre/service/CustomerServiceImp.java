@@ -1,10 +1,10 @@
-package com.pluralsight.service;
+package com.fre.service;
 
 import java.util.List;
 
-import com.pluralsight.models.Customer;
-import com.pluralsight.repository.CustomerRepository;
-import com.pluralsight.repository.HibernateCustomerRepository;
+import com.fre.models.Customer;
+import com.fre.repository.CustomerRepository;
+import com.fre.repository.HibernateCustomerRepository;
 
 /**
  * In this class we are making a method that could talk to our repository so we can use it 

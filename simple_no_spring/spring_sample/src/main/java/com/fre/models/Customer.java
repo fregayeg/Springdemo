@@ -1,4 +1,4 @@
-package com.pluralsight.models;
+package com.fre.models;
 
 /**
  * This class is a simple object with few fields 
